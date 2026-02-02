@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лев Карцев — Programming & Cryptography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0b0f14;
+            --bg-soft: #121822;
+            --text: #e6edf3;
+            --muted: #9aa4b2;
+            --accent: #4da3ff;
+            --accent-2: #6cffc1;
+            --danger: #ff6b6b;
+            --glass: rgba(255,255,255,0.04);
+            --border: rgba(255,255,255,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: radial-gradient(1200px 600px at 10% -10%, #132035 0%, transparent 60%),
+                        radial-gradient(800px 500px at 90% 10%, #0f2b24 0%, transparent 55%),
+                        var(--bg);
+            color: var(--text);
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 100px 20px 80px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        header h1 span {
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            max-width: 850px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 120px;
+        }
+
+        section {
+            margin-top: 80px;
+            background: linear-gradient(180deg, var(--glass), transparent);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 40px;
+            backdrop-filter: blur(6px);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        section h2::before {
+            content: "// ";
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        section p {
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-2);
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--muted);
+        }
+
+        .project {
+            margin-top: 30px;
+            border-left: 3px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        footer span {
+            color: var(--accent);
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><span>Programming</span> & <span>Cryptography</span></h1>
+    <p>Создание быстрых, защищённых и высоконагруженных систем.
+        C++ • Java • Rust • Backend • Crypto • Low-Latency
+    </p>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>Введение</h2>
+        <p>
+            Программирование для меня — это способ мышления и созидания. Оно требует логики,
+            внимательности и умения видеть систему целиком. Работая с C++, Java и Rust,
+            я создаю программы и сервисы, которые решают реальные задачи и приносят пользу людям.
+        </p>
+        <p>
+            Меня вдохновляет возможность создавать сложные системы с нуля:
+            от защищённых сервисов до алгоритмов, работающих за микросекунды.
+        </p>
+    </section>
+
+    <section>
+        <h2>Технологический стек</h2>
+        <div class="stack">
+            <div class="card">
+                <h3>C++</h3>
+                <p class="mono">Low-latency • Memory control</p>
+                <p>
+                    Используется в высокопроизводительных системах,
+                    финтехе, играх и сетевых сервисах.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Java</h3>
+                <p class="mono">Backend • Spring Boot</p>
+                <p>
+                    Масштабируемые бэкенды, микросервисы,
+                    базы данных и корпоративные системы.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Rust</h3>
+                <p class="mono">Safe • Fast • Modern</p>
+                <p>
+                    Язык будущего для системного программирования
+                    и криптографии.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Криптография и безопасность</h2>
+        <p>
+            Криптография позволяет создавать системы, в которых данные
+            остаются конфиденциальными даже при передаче по открытым сетям.
+        </p>
+        <ul>
+            <li>Шифрование данных</li>
+            <li>Diffie–Hellman и обмен ключами</li>
+            <li>End-to-End Encryption</li>
+            <li>Цифровые подписи и хеширование</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Проекты</h2>
+
+        <div class="project">
+            <h3>NeoEncrypt</h3>
+            <p class="mono">C++ • Cryptography • Diffie–Hellman</p>
+            <p>
+                Криптографический модуль для NeoTerra Messenger.
+                Реализует безопасный обмен ключами и end-to-end шифрование.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Facemash</h3>
+            <p class="mono">Java • Spring Boot • PostgreSQL</p>
+            <p>
+                Веб-приложение с серверной логикой, авторизацией
+                и административной частью.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Transaction System (Olympiad)</h3>
+            <p class="mono">JWT • Security • DSL</p>
+            <p>
+                Система транзакций с JWT-авторизацией,
+                ролями и правилами доступа.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Профессиональный путь</h2>
+        <p>
+            Я рассматриваю развитие как backend-разработчик в big tech
+            или как quantitative developer, работающий с low-latency системами
+            и высокопроизводительными алгоритмами.
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    <span>Лев Карцев</span> — 8 «В» класс • © 2026
+</footer>
+
+</body>
+</html>
